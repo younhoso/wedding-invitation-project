@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 import { pretendard } from '@/libs/fonts';
-import StyledComponentsRegistry from '@/libs/registry';
+import CustomThemeProvider from '@/provider/CustomThemeProvider';
 import ReactQueryProvider from '@/provider/ReactQueryProvider';
 
 export const metadata: Metadata = {
@@ -17,9 +17,9 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body className={pretendard.className}>
-        <StyledComponentsRegistry>
+        <CustomThemeProvider>
           <ReactQueryProvider>{children}</ReactQueryProvider>
-        </StyledComponentsRegistry>
+        </CustomThemeProvider>
       </body>
     </html>
   );
