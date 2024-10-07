@@ -13,7 +13,7 @@ export default function ImageGallery({images}:{images: string[]}) {
         <ul className={clsx('wrap-images')}>
           {images.map((src, idx) => {
             return (
-              <List src={src} alt={'사진첩 이미지'}/>
+              <List key={idx} src={src} alt={'사진첩 이미지'}/>
             )
           })}
         </ul>
