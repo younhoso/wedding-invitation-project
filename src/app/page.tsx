@@ -7,6 +7,7 @@ import { Wedding } from '@/types';
 
 import Error from './components/Error/Error';
 import Heading from './components/Heading';
+import ImageGallery from './components/ImageGallery';
 import Loading from './components/Loading';
 import Video from './components/Video';
 
@@ -32,6 +33,7 @@ export default function HomePage() {
     <div>
       <Heading date={weddingData?.data.date!} />
       <Video />
+      <ImageGallery images={weddingData?.data.galleryImages!}/>
     </div>
   );
 }

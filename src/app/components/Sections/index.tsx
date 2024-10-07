@@ -6,8 +6,13 @@ import { SectionsStyled } from './styled';
 
 type SectionProps = {
   children: ReactNode;
+  className: string;
 };
 
-export default function Sections({ children }: SectionProps) {
-  return <SectionsStyled className={clsx('Section')}>{children}</SectionsStyled>;
+export default function Sections({ className, children }: SectionProps) {
+  return (
+    <SectionsStyled className={clsx('Section', className)}>
+      {children}
+    </SectionsStyled>
+  );
 }
