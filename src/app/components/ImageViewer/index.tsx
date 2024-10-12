@@ -24,7 +24,7 @@ export default function ImageViewer({ images, selectedIdx, onClose }: ImagesProp
   );
 }
 
-function CloseButton({ onClose }: { onClose: () => void }) {
+function CloseButton({ onClose }: { onClose?: () => void }) {
   return (
     <CloseSvgButtonStyled
       id="svg8"

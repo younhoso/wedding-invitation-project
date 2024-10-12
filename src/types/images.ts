@@ -1,5 +1,5 @@
 export type ImagesProps = {
   images: string[];
-  selectedIdx: number;
-  onClose: () => void;
+  selectedIdx?: number;
+  onClose?: () => void;
 };

@@ -217,3 +217,10 @@ export const fontStyle = {
     line-height: 16px;
   `,
 };
+
+export const txtContent = {
+  center: `
+    text-align: center;
+    line-height: 26px;
+  `,
+};
