@@ -5,6 +5,7 @@ import { useQuery } from '@tanstack/react-query';
 import { customAxios } from '@/libs/customAxios';
 import { Wedding } from '@/types';
 
+import Calender from './components/Calender';
 import Error from './components/Error/Error';
 import Heading from './components/Heading';
 import ImageGallery from './components/ImageGallery';
@@ -42,7 +43,6 @@ export default function HomePage() {
 
   return (
     <div>
-      (
       <>
         <Heading date={date} />
         <Video />
@@ -55,8 +55,8 @@ export default function HomePage() {
         />
         <Invitation message={invitation} />
         <ImageGallery images={galleryImages} />
+        <Calender date={date} />
       </>
-      )
     </div>
   );
 }
