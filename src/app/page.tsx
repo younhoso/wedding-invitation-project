@@ -12,6 +12,7 @@ import ImageGallery from './components/ImageGallery';
 import Intro from './components/Intro';
 import Invitation from './components/Invitation';
 import Loading from './components/Loading';
+import Map from './components/MAP';
 import Video from './components/Video';
 
 export default function HomePage() {
@@ -56,6 +57,7 @@ export default function HomePage() {
         <Invitation message={invitation} />
         <ImageGallery images={galleryImages} />
         <Calender date={date} />
+        <Map location={location} />
       </>
     </div>
   );
