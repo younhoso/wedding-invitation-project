@@ -6,6 +6,7 @@ import { customAxios } from '@/libs/customAxios';
 import { Wedding } from '@/types';
 
 import Calender from './components/Calender';
+import Contact from './components/Contact';
 import Error from './components/Error/Error';
 import Heading from './components/Heading';
 import ImageGallery from './components/ImageGallery';
@@ -58,6 +59,7 @@ export default function HomePage() {
         <ImageGallery images={galleryImages} />
         <Calender date={date} />
         <Map location={location} />
+        <Contact groom={groom} bride={bride} />
       </>
     </div>
   );

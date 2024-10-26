@@ -13,6 +13,7 @@ export type Location = {
 export type Account = {
   bankName: string;
   accountNumber: string;
+  kakaopayLink?: string;
 };
 
 export type Person = {
@@ -21,20 +22,18 @@ export type Person = {
   account: Account;
 };
 
-export type Wedding = {
+export interface Wedding {
   data: {
     id: number;
     date: string;
     location: Location;
-
+    groom: Person & { parents: Person[] };
+    bride: Person & { parents: Person[] };
     message: {
       intro: string;
       invitation: string;
     };
     galleryImages: string[];
     attendCount: number;
-
-    groom: Person & { parents: Person[] };
-    bride: Person & { parents: Person[] };
   };
-};
+}
